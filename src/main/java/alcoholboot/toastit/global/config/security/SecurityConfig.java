@@ -77,7 +77,7 @@ public class SecurityConfig {
             "/auth/join", // 회원가입 API
             "/recovery/**", // 복구 API
             "/api/**",   // 임시!
-            "/actuator" // 임시!
+            "/actuator/**" // 임시!
     };
 
     /**
