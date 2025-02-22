@@ -71,11 +71,5 @@ pipeline {
                 sh 'ssh mydeploy "sh deploy.sh"'
             }
         }
-
-        stage('Clean Workspace') {
-            steps {
-                cleanWs()
-            }
-        }
     }
 }
