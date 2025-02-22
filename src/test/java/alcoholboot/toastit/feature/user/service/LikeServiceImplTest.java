@@ -42,8 +42,8 @@
 //    @Test
 //    void save_ShouldSaveLike() {
 //        when(like.convertToEntity()).thenReturn(likeEntity);
-//        likeService.save(like);
-//        verify(likeRepository, times(1)).save(likeEntity);
+//        likeService.update(like);
+//        verify(likeRepository, times(1)).update(likeEntity);
 //        //좋아요 저장 확인
 //    }
 //

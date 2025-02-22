@@ -17,7 +17,7 @@ public interface UserManagementService {
      *
      * @param userJoinDto 회원가입 요청 DTO
      */
-    void save(AuthJoinRequest userJoinDto);
+    void update(AuthJoinRequest userJoinDto);
 
     /**
      * 이메일과 소셜 로그인 제공자를 기반으로 사용자를 조회하는 메서드.
@@ -84,11 +84,11 @@ public interface UserManagementService {
     Optional<User> findByNickname(String nickname);
 
     /**
-     * User 엔티티를 저장하는 메서드.
+     * User 엔티티를 업데이트 하는 메서드.
      *
      * @param user 저장할 User 엔티티 객체
      */
-    void save(UserEntity user);
+    void update(UserEntity user);
 
     /**
      * 이메일을 통해 사용자를 삭제하는 메서드.

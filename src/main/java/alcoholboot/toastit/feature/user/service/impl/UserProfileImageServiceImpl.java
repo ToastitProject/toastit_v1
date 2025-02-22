@@ -58,7 +58,7 @@ public class UserProfileImageServiceImpl implements UserProfileImageService {
 
         // 사용자 프로필 이미지 URL 업데이트
         user.setProfileImageUrl(newUrl);
-        userManagementService.save(user.convertToEntity());
+        userManagementService.update(user.convertToEntity());
     }
 
     /**

@@ -43,7 +43,7 @@ public class UserManagementServiceImpl implements UserManagementService {
      * @param authJoinRequest 사용자 회원가입 요청 DTO
      */
     @Transactional
-    public void save(AuthJoinRequest authJoinRequest) {
+    public void update(AuthJoinRequest authJoinRequest) {
         // 이메일 중복 체크
         if (findByEmail(authJoinRequest.getEmail()).isPresent()) {
             throw new CustomException(CommonExceptionCode.EXIST_EMAIL_ERROR);
@@ -192,7 +192,7 @@ public class UserManagementServiceImpl implements UserManagementService {
      */
     @Override
     @Transactional
-    public void save(UserEntity user) {
+    public void update(UserEntity user) {
         userRepository.save(user);
     }
 

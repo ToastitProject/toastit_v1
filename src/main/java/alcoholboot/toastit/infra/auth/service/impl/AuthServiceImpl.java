@@ -121,7 +121,7 @@ public class AuthServiceImpl implements AuthService {
         }
 
         log.info("유저 저장 시작! 이메일: {}, 인증코드: {}", authJoinRequest.getEmail(), authJoinRequest.getAuthCode());
-        userManagementService.save(authJoinRequest);
+        userManagementService.update(authJoinRequest);
         log.info("유저 저장 성공!");
     }
 

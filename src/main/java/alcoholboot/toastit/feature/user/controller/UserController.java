@@ -1,9 +1,7 @@
 package alcoholboot.toastit.feature.user.controller;
 
 import alcoholboot.toastit.feature.basecocktail.domain.Cocktail;
-import alcoholboot.toastit.feature.basecocktail.entity.CocktailDocument;
 import alcoholboot.toastit.feature.basecocktail.service.CocktailService;
-import alcoholboot.toastit.feature.craftcocktail.domain.CraftCocktail;
 import alcoholboot.toastit.feature.craftcocktail.entity.CraftCocktailEntity;
 import alcoholboot.toastit.feature.craftcocktail.service.CraftCocktailService;
 import alcoholboot.toastit.feature.user.domain.User;
@@ -160,7 +158,7 @@ public class UserController {
             if (userOptional.isPresent()) {
                 User user = userOptional.get();
                 user.setNickname(nickname);
-                userManagementService.save(user.convertToEntity());
+                userManagementService.update(user.convertToEntity());
             } else {
                 return "redirect:/error";
             }

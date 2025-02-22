@@ -85,7 +85,7 @@ public class LikeControllerTest {
         String result = likeController.like(cocktailId.toHexString());
 
 
-        verify(likeService, times(1)).save(any(Like.class));
+        verify(likeService, times(1)).update(any(Like.class));
         assertEquals("redirect:/feature/user/mypage", result);
     }
 

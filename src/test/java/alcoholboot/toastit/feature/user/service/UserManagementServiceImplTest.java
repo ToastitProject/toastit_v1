@@ -30,14 +30,14 @@ public class UserManagementServiceImplTest {
 //    }
 
     @Test
-    public void testSave() {
+    public void testUpdate() {
         // Given
         UserEntity userEntity = new UserEntity();
 
         userEntity.setNickname("testuser");
 
         // When
-        userService.save(userEntity);
+        userService.update(userEntity);
 
         // Then
         ArgumentCaptor<UserEntity> userEntityCaptor = ArgumentCaptor.forClass(UserEntity.class);

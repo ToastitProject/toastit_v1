@@ -55,6 +55,6 @@ public class ImageUploadControllerTest {
 //                .andDo(print());
 //
 //
-//        verify(imageService).save(any(Image.class));
+//        verify(imageService).update(any(Image.class));
 //    }
 }
