@@ -6,6 +6,7 @@ pipeline {
     }
 
     environment {
+        GRADLE_USER_HOME = "/var/jenkins_home/workspace/.gradle"
         IMAGE_NAME = 'toastit/v1'
     }
 
@@ -68,6 +69,12 @@ pipeline {
                     '''
                 }
                 sh 'ssh mydeploy "sh deploy.sh"'
+            }
+        }
+
+        stage('Clean Workspace') {
+            steps {
+                cleanWs()
             }
         }
     }
